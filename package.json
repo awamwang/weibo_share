@@ -1,0 +1,25 @@
+{
+  "name": "logseq-weibo-share",
+  "version": "0.0.1",
+  "description": "A Logseq plugin to share your notes on Weibo",
+  "main": "dist/index.html",
+  "author": "awam",
+  "license": "MIT",
+  "targets": {
+    "main": false
+  },
+  "default": "dist/index.html",
+  "scripts": {
+    "dev": "parcel ./index.html --public-url ./",
+    "dev:build": "nodemon --delay 2s -e ts,tsx,html --exec 'parcel build --public-url . --no-source-maps index.html' index.tsx",
+    "build": "parcel build --public-url . --no-source-maps index.html"
+  },
+  "devDependencies": {
+    "@logseq/libs": "^0.0.6",
+    "parcel": "^2.12.0"
+  },
+  "logseq": {
+    "id": "awamwang_weibo_share",
+    "icon": "./logo.png"
+  }
+}
